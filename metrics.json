@@ -1,0 +1,610 @@
+{
+  "model": "MobileNetV3 Small + trained tissue head",
+  "created": "2026-09-30",
+  "seed": 20260930,
+  "classes": [
+    "adipose",
+    "complex",
+    "debris",
+    "empty",
+    "lympho",
+    "mucosa",
+    "stroma",
+    "tumor"
+  ],
+  "input": {
+    "shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "dtype": "float32",
+    "range": [
+      0,
+      255
+    ],
+    "channels": "RGB",
+    "resize": "224\u00d7224 bilinear; normalization is embedded in model"
+  },
+  "dataset_images": 1024,
+  "unique_images": 1024,
+  "exact_duplicates_removed": 0,
+  "split": {
+    "training": 716,
+    "validation": 154,
+    "test": 154
+  },
+  "best_epoch": 16,
+  "test_accuracy": 0.9285714285714286,
+  "test_correct": 143,
+  "classification_report": {
+    "adipose": {
+      "precision": 0.9523809523809523,
+      "recall": 0.9523809523809523,
+      "f1-score": 0.9523809523809523,
+      "support": 21.0
+    },
+    "complex": {
+      "precision": 0.8666666666666667,
+      "recall": 0.7647058823529411,
+      "f1-score": 0.8125,
+      "support": 17.0
+    },
+    "debris": {
+      "precision": 0.9411764705882353,
+      "recall": 0.8888888888888888,
+      "f1-score": 0.9142857142857143,
+      "support": 18.0
+    },
+    "empty": {
+      "precision": 0.9473684210526315,
+      "recall": 1.0,
+      "f1-score": 0.972972972972973,
+      "support": 18.0
+    },
+    "lympho": {
+      "precision": 0.9,
+      "recall": 0.9473684210526315,
+      "f1-score": 0.9230769230769231,
+      "support": 19.0
+    },
+    "mucosa": {
+      "precision": 1.0,
+      "recall": 0.9523809523809523,
+      "f1-score": 0.975609756097561,
+      "support": 21.0
+    },
+    "stroma": {
+      "precision": 0.8947368421052632,
+      "recall": 0.8947368421052632,
+      "f1-score": 0.8947368421052632,
+      "support": 19.0
+    },
+    "tumor": {
+      "precision": 0.9130434782608695,
+      "recall": 1.0,
+      "f1-score": 0.9545454545454546,
+      "support": 21.0
+    },
+    "accuracy": 0.9285714285714286,
+    "macro avg": {
+      "precision": 0.9269216038818273,
+      "recall": 0.9250577423952037,
+      "f1-score": 0.9250135769331053,
+      "support": 154.0
+    },
+    "weighted avg": {
+      "precision": 0.928578275495761,
+      "recall": 0.9285714285714286,
+      "f1-score": 0.9276290735884496,
+      "support": 154.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      20,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      13,
+      0,
+      0,
+      2,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      16,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      18,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      18,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      20,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      17,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      21
+    ]
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 1.2151809051716127,
+      "accuracy": 0.6707402234636871,
+      "val_loss": 0.5843935608863831,
+      "val_accuracy": 0.8181818127632141
+    },
+    {
+      "epoch": 2,
+      "loss": 0.7064903688164397,
+      "accuracy": 0.8393854748603352,
+      "val_loss": 0.38822948932647705,
+      "val_accuracy": 0.9090909361839294
+    },
+    {
+      "epoch": 3,
+      "loss": 0.5906767701969466,
+      "accuracy": 0.8861731843575419,
+      "val_loss": 0.3539539873600006,
+      "val_accuracy": 0.9025974273681641
+    },
+    {
+      "epoch": 4,
+      "loss": 0.5351099987935753,
+      "accuracy": 0.9095670391061452,
+      "val_loss": 0.32202136516571045,
+      "val_accuracy": 0.9285714030265808
+    },
+    {
+      "epoch": 5,
+      "loss": 0.4888578183824124,
+      "accuracy": 0.9294692737430168,
+      "val_loss": 0.3090565800666809,
+      "val_accuracy": 0.9025974273681641
+    },
+    {
+      "epoch": 6,
+      "loss": 0.4666353181087771,
+      "accuracy": 0.9395949720670391,
+      "val_loss": 0.31488338112831116,
+      "val_accuracy": 0.9220778942108154
+    },
+    {
+      "epoch": 7,
+      "loss": 0.4461551922992621,
+      "accuracy": 0.9500698324022346,
+      "val_loss": 0.3019280731678009,
+      "val_accuracy": 0.9350649118423462
+    },
+    {
+      "epoch": 8,
+      "loss": 0.43190091282295784,
+      "accuracy": 0.9587988826815642,
+      "val_loss": 0.2971068024635315,
+      "val_accuracy": 0.9220778942108154
+    },
+    {
+      "epoch": 9,
+      "loss": 0.4149573483613616,
+      "accuracy": 0.9626396648044693,
+      "val_loss": 0.29637566208839417,
+      "val_accuracy": 0.9025974273681641
+    },
+    {
+      "epoch": 10,
+      "loss": 0.40424415052936064,
+      "accuracy": 0.9661312849162011,
+      "val_loss": 0.2927038371562958,
+      "val_accuracy": 0.9285714030265808
+    },
+    {
+      "epoch": 11,
+      "loss": 0.3948392448478571,
+      "accuracy": 0.9724162011173184,
+      "val_loss": 0.2925967872142792,
+      "val_accuracy": 0.9090909361839294
+    },
+    {
+      "epoch": 12,
+      "loss": 0.39169475852444186,
+      "accuracy": 0.9738128491620112,
+      "val_loss": 0.2982022166252136,
+      "val_accuracy": 0.9350649118423462
+    },
+    {
+      "epoch": 13,
+      "loss": 0.3798590898513794,
+      "accuracy": 0.9780027932960894,
+      "val_loss": 0.2798983156681061,
+      "val_accuracy": 0.9155844449996948
+    },
+    {
+      "epoch": 14,
+      "loss": 0.3728156014860675,
+      "accuracy": 0.9835893854748603,
+      "val_loss": 0.29031020402908325,
+      "val_accuracy": 0.9285714030265808
+    },
+    {
+      "epoch": 15,
+      "loss": 0.36443546464323334,
+      "accuracy": 0.9860335195530726,
+      "val_loss": 0.28883838653564453,
+      "val_accuracy": 0.9285714030265808
+    },
+    {
+      "epoch": 16,
+      "loss": 0.3616165157469957,
+      "accuracy": 0.9853351955307262,
+      "val_loss": 0.27368029952049255,
+      "val_accuracy": 0.9415584206581116
+    },
+    {
+      "epoch": 17,
+      "loss": 0.35344489493183584,
+      "accuracy": 0.9891759776536313,
+      "val_loss": 0.2894080877304077,
+      "val_accuracy": 0.9285714030265808
+    },
+    {
+      "epoch": 18,
+      "loss": 0.3507159358962288,
+      "accuracy": 0.9898743016759777,
+      "val_loss": 0.28450822830200195,
+      "val_accuracy": 0.9090909361839294
+    },
+    {
+      "epoch": 19,
+      "loss": 0.34614284011904756,
+      "accuracy": 0.9916201117318436,
+      "val_loss": 0.2846682667732239,
+      "val_accuracy": 0.9090909361839294
+    },
+    {
+      "epoch": 20,
+      "loss": 0.3456126784479152,
+      "accuracy": 0.990572625698324,
+      "val_loss": 0.29009348154067993,
+      "val_accuracy": 0.9025974273681641
+    },
+    {
+      "epoch": 21,
+      "loss": 0.3365954586913466,
+      "accuracy": 0.9940642458100558,
+      "val_loss": 0.28547343611717224,
+      "val_accuracy": 0.9220778942108154
+    },
+    {
+      "epoch": 22,
+      "loss": 0.3343688241263342,
+      "accuracy": 0.9968575418994413,
+      "val_loss": 0.31348279118537903,
+      "val_accuracy": 0.8961039185523987
+    },
+    {
+      "epoch": 23,
+      "loss": 0.3324483081948158,
+      "accuracy": 0.9958100558659218,
+      "val_loss": 0.2907447814941406,
+      "val_accuracy": 0.9025974273681641
+    },
+    {
+      "epoch": 24,
+      "loss": 0.3300467759537297,
+      "accuracy": 0.9961592178770949,
+      "val_loss": 0.3050088882446289,
+      "val_accuracy": 0.9155844449996948
+    },
+    {
+      "epoch": 25,
+      "loss": 0.32643167749463514,
+      "accuracy": 0.9975558659217877,
+      "val_loss": 0.3029938042163849,
+      "val_accuracy": 0.8961039185523987
+    },
+    {
+      "epoch": 26,
+      "loss": 0.32296619834846624,
+      "accuracy": 0.9975558659217877,
+      "val_loss": 0.30037304759025574,
+      "val_accuracy": 0.9025974273681641
+    },
+    {
+      "epoch": 27,
+      "loss": 0.32182382721474717,
+      "accuracy": 0.9972067039106145,
+      "val_loss": 0.30156999826431274,
+      "val_accuracy": 0.9090909361839294
+    },
+    {
+      "epoch": 28,
+      "loss": 0.31845523142281856,
+      "accuracy": 0.9982541899441341,
+      "val_loss": 0.3008585274219513,
+      "val_accuracy": 0.9155844449996948
+    },
+    {
+      "epoch": 29,
+      "loss": 0.3178413422081058,
+      "accuracy": 0.9982541899441341,
+      "val_loss": 0.30658984184265137,
+      "val_accuracy": 0.9155844449996948
+    },
+    {
+      "epoch": 30,
+      "loss": 0.3176737887233329,
+      "accuracy": 0.9989525139664804,
+      "val_loss": 0.3186694383621216,
+      "val_accuracy": 0.8961039185523987
+    },
+    {
+      "epoch": 31,
+      "loss": 0.3154687888129463,
+      "accuracy": 0.9996508379888268,
+      "val_loss": 0.29339998960494995,
+      "val_accuracy": 0.9155844449996948
+    },
+    {
+      "epoch": 32,
+      "loss": 0.3120341584003171,
+      "accuracy": 0.9993016759776536,
+      "val_loss": 0.2991182506084442,
+      "val_accuracy": 0.9025974273681641
+    },
+    {
+      "epoch": 33,
+      "loss": 0.30978602487281715,
+      "accuracy": 0.9993016759776536,
+      "val_loss": 0.296546071767807,
+      "val_accuracy": 0.9090909361839294
+    },
+    {
+      "epoch": 34,
+      "loss": 0.3089966504267474,
+      "accuracy": 0.9996508379888268,
+      "val_loss": 0.30406108498573303,
+      "val_accuracy": 0.9090909361839294
+    },
+    {
+      "epoch": 35,
+      "loss": 0.3078592790904658,
+      "accuracy": 0.9986033519553073,
+      "val_loss": 0.2979734241962433,
+      "val_accuracy": 0.9155844449996948
+    },
+    {
+      "epoch": 36,
+      "loss": 0.3088380016761119,
+      "accuracy": 0.9989525139664804,
+      "val_loss": 0.3064782917499542,
+      "val_accuracy": 0.9090909361839294
+    }
+  ],
+  "limitations": [
+    "Same-source image-level holdout, not patient-level or external validation. Patient identifiers are unavailable.",
+    "The model classifies eight tissue categories, not a patient diagnosis.",
+    "Examples are selected held-out images. Aggregate metrics include all reserved test images.",
+    "Softmax scores are not calibrated diagnostic probabilities."
+  ],
+  "samples": [
+    {
+      "label": "adipose",
+      "path": "sample-adipose.png",
+      "dataset_index": 676,
+      "prediction": "adipose",
+      "scores": [
+        0.9626137614250183,
+        0.00783297885209322,
+        0.009081399068236351,
+        0.004357888363301754,
+        0.004261770285665989,
+        0.001961108762770891,
+        0.0032122654374688864,
+        0.0066787926480174065
+      ],
+      "correct": true,
+      "selection": "First correctly classified held-out example for this category, when available."
+    },
+    {
+      "label": "complex",
+      "path": "sample-complex.png",
+      "dataset_index": 72,
+      "prediction": "complex",
+      "scores": [
+        0.005889956373721361,
+        0.8198709487915039,
+        0.07404951751232147,
+        0.019009115174412727,
+        0.028887370601296425,
+        0.011498875916004181,
+        0.0377059131860733,
+        0.003088301280513406
+      ],
+      "correct": true,
+      "selection": "First correctly classified held-out example for this category, when available."
+    },
+    {
+      "label": "debris",
+      "path": "sample-debris.png",
+      "dataset_index": 967,
+      "prediction": "debris",
+      "scores": [
+        0.05924950912594795,
+        0.00873330608010292,
+        0.4541960060596466,
+        0.02078021503984928,
+        0.16363832354545593,
+        0.14883291721343994,
+        0.1430298537015915,
+        0.0015398006653413177
+      ],
+      "correct": true,
+      "selection": "First correctly classified held-out example for this category, when available."
+    },
+    {
+      "label": "empty",
+      "path": "sample-empty.png",
+      "dataset_index": 991,
+      "prediction": "empty",
+      "scores": [
+        0.0021985231433063745,
+        0.0022195549681782722,
+        0.0019201386021450162,
+        0.9754501581192017,
+        0.00541875883936882,
+        0.0031428199727088213,
+        0.007657618727535009,
+        0.0019924843218177557
+      ],
+      "correct": true,
+      "selection": "First correctly classified held-out example for this category, when available."
+    },
+    {
+      "label": "lympho",
+      "path": "sample-lympho.png",
+      "dataset_index": 912,
+      "prediction": "lympho",
+      "scores": [
+        0.0006249067955650389,
+        0.0006621833890676498,
+        0.0008751034620217979,
+        0.0012259194627404213,
+        0.9958385229110718,
+        0.0002632160612847656,
+        7.001721678534523e-05,
+        0.00044021851499564946
+      ],
+      "correct": true,
+      "selection": "First correctly classified held-out example for this category, when available."
+    },
+    {
+      "label": "mucosa",
+      "path": "sample-mucosa.png",
+      "dataset_index": 39,
+      "prediction": "mucosa",
+      "scores": [
+        0.0027249171398580074,
+        0.006640479434281588,
+        0.0031697573140263557,
+        0.0031197667121887207,
+        0.004170894622802734,
+        0.9767838716506958,
+        0.002353701973333955,
+        0.001036604167893529
+      ],
+      "correct": true,
+      "selection": "First correctly classified held-out example for this category, when available."
+    },
+    {
+      "label": "stroma",
+      "path": "sample-stroma.png",
+      "dataset_index": 517,
+      "prediction": "stroma",
+      "scores": [
+        0.0014053110498934984,
+        0.0016773438546806574,
+        0.00014666724018752575,
+        0.0031174218747764826,
+        0.0009442075970582664,
+        0.00025226903380826116,
+        0.9920028448104858,
+        0.0004539742658380419
+      ],
+      "correct": true,
+      "selection": "First correctly classified held-out example for this category, when available."
+    },
+    {
+      "label": "tumor",
+      "path": "sample-tumor.png",
+      "dataset_index": 714,
+      "prediction": "tumor",
+      "scores": [
+        0.007712190039455891,
+        0.0026493293698877096,
+        0.0004148026055190712,
+        0.001033176900818944,
+        0.0050537423230707645,
+        0.0215992983430624,
+        0.00031216308707371354,
+        0.9612252712249756
+      ],
+      "correct": true,
+      "selection": "First correctly classified held-out example for this category, when available."
+    },
+    {
+      "label": "lympho",
+      "path": "sample-error.png",
+      "dataset_index": 173,
+      "prediction": "complex",
+      "scores": [
+        0.006987496744841337,
+        0.822102427482605,
+        0.023200584575533867,
+        0.007979176938533783,
+        0.026506444439291954,
+        0.007081141695380211,
+        0.00832493044435978,
+        0.09781794250011444
+      ],
+      "correct": false,
+      "selection": "First misclassified held-out example."
+    }
+  ]
+}
